@@ -1,0 +1,16 @@
+.inputWrapper{
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.label{
+    width: 50%;
+}
+
+input{
+    
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}

@@ -1,23 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [name, setname] = useState("Pratiksha");
+  const [age, setage] = useState(20);
+
+  const [data, setdata] = useState([1, 2, 3, 4, 6]);
+  const [obj, setobj] = useState([
+    { name: "pppp", age: 16 },
+    { name: "dddd", age: 20 },
+  ]);
+  const [test, settest] = useState("gurav");
+
+  function demo() {
+    console.log("demo");
+  }
+
+  useEffect(() => {
+    demo();
+  }, [name]);
+
+  function changeName() {
+    setname("Pratiksha Gurav");
+    setage(23);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavLink to="/about">
+        <button>Go to about</button>
+        
+      </NavLink>
+      <p></p>
+      <p>
+        my name is {name} and {age}{" "}
+      </p>
+      <p onClick={()=>{
+        changeName()
+      }}>Change your name</p>
+      {/* <p>{obj}</p> */}
+      {data?.map((item) => (
+        <p>{item}</p>
+      ))}
+      {obj?.map((item) => (
+        <div>
+          <p>{item.name}</p>
+          <p>{item.age}</p>
+
+          <p>=====================</p>
+          <p>
+            {" "}
+            {item.age == 23
+              ? "pratiksha"
+              : item.age >= 56
+              ? "gurav"
+              : "pratiksha gurav"}
+          </p>
+        </div>
+      ))}
     </div>
   );
 }

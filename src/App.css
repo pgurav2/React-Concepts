@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,7 +34,83 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.button {
+  color: aquamarine;
+}
+
+.active {
+  background-color: blue;
+}
+
+.active_1 {
+  background-color: rgb(141, 141, 141);
+}
+
+.act_1 {
+  background-color: coral;
+}
+
+.act_2 {
+  background-color: cadetblue;
+}
+
+.bg1 {
+  background-color: aquamarine;
+}
+
+.bg2 {
+  background-color: chartreuse;
+}
+
+.img_size {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.Gallery-wrapper {
+  display: flex;
+}
+
+.social_wrapper {
+  width: 50px;
+  transition: 0.5 ease-in-out;
+  border: 1px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.social_wrapper:hover{
+  width: 150px;
+}
+
+.social{
+  display: block;
+}
+
+.social2 {
+  display: none;
+}
+
+.social:hover {
+  display: none;
+  
+}
+
+.social_wrapper:hover+.social2 {
+  display: block;
+
+}
+._border{
+  border-color: red;
+}
+
+input:focus{
+  outline: 1px solid green;
 }

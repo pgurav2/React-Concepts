@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.new_card {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tabs {
+    display: flex;
+    column-gap: 10px;
+    margin: 40px 0;
+}
+
+.btn {
+    width: 200px;
+    padding: 8px;
+}
+.active{
+    background-color: red;
+}

@@ -1,0 +1,27 @@
+.personalDetailsWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.continue{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.continue button{
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: rgb(173, 233, 114);
+    cursor: pointer;
+    
+}
+
+.inputActive{
+    border: 1px solid red;
+}
+
+.disabled{
+  pointer-events:none;  
+}

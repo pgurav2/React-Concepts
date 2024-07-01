@@ -1,0 +1,29 @@
+.container{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapperFirst{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.wrapperSecond{
+    width: 60%;
+}
+.star{
+    color: red;
+}
+.items{
+    cursor: pointer;
+    padding: 10px;
+
+}
+.activeCursor{
+    color: white;
+    background-color: rgb(29, 150, 29);
+    padding: 10px;
+    border-radius: 10px;
+}
