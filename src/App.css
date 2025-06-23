@@ -1,8 +1,15 @@
 .App {
   text-align: center;
 }
+.main-bar{
+  width: 100%;
+}
 
-
+.bar{
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
 
 .App-logo {
   height: 40vmin;

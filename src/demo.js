@@ -22,6 +22,28 @@ export default function Demo() {
     // });
   }, []);
 
+  const abc = [];
+  let arr = [1, 2, [4, 6, [8]]];
+
+  arr.map((item, index) => {
+    if (typeof item === "number") {
+      abc.push(item);
+    } else if (Array.isArray(item)) {
+      item.map((item2, index2) => {
+        if (typeof item2 === "number") {
+          abc.push(item2);
+        }
+        else(Array.isArray(item2)){
+          item2.map((item3,index)=>{
+            if(typeof item3==="number"){
+              abc.push(item3)
+            }
+          })
+        }
+      });
+    }
+  });
+  console.log(abc);
   return (
     <div>
       {console.log(homePageData)}

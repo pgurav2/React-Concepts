@@ -17,6 +17,19 @@ function App() {
   function demo() {
     console.log("demo");
   }
+  function x() {
+    let a = "hello";
+    return a;
+    // y();
+
+    // const y = () => console.log("first");
+  }
+  useEffect(() => {}, []);
+
+  setInterval(() => {
+   let b= x();
+   console.log(b)
+  }, 1000);
 
   useEffect(() => {
     demo();
@@ -30,15 +43,18 @@ function App() {
     <div className="App">
       <NavLink to="/about">
         <button>Go to about</button>
-        
       </NavLink>
       <p></p>
       <p>
         my name is {name} and {age}{" "}
       </p>
-      <p onClick={()=>{
-        changeName()
-      }}>Change your name</p>
+      <p
+        onClick={() => {
+          changeName();
+        }}
+      >
+        Change your name
+      </p>
       {/* <p>{obj}</p> */}
       {data?.map((item) => (
         <p>{item}</p>

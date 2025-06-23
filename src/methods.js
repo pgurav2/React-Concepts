@@ -1,89 +1,81 @@
-import React from 'react'
+import React from "react";
 
 export default function Methods() {
-    let arr = ["pratiksha", "aditi", "snehal", "shristy"]
-    let arr2 = [1, 2, 3, 5, 4, 4]
+  let arr = ["pratiksha", "aditi", "snehal", "shristy"];
+  let arr2 = [1, 2, 3, 5, 4, 4];
 
+  // includes (return boolean)
+  console.log(arr.includes("shristy"));
 
-    // includes (return boolean)
-    console.log(arr.includes("shristy"))
+  // foreach (returns nothing)
+  arr.forEach((item, index) => console.log(item));
 
-    // foreach (returns nothing)
-    arr.forEach((item, index) => (
-        console.log(item)
-    ))
+  // filter  (returns new array)
+  let filterArr = arr2.filter((item, index) => item >= 4);
+  console.log(filterArr);
 
-    // filter  (returns new array)
-    let filterArr = arr2.filter((item, index) => (
-        item >= 4
-    ))
-    console.log(filterArr)
+  // join (return string)
+  let joinArr = arr.join("@");
+  console.log("jjjjjjjjjjjjjjjjjjjjjjjjj" + joinArr);
 
-    // join (return string)
-    let joinArr = arr.join("@")
-    console.log("jjjjjjjjjjjjjjjjjjjjjjjjj" + joinArr)
+  // concat (return new array)
+  let concatArr = arr.concat(arr2);
+  console.log("cccccccccccccccccccccccccccccccccc", concatArr);
 
+  // some (return boolean)
+  let someArr = arr.some((item, index) => item === "shristy");
 
-    // concat (return new array)
-    let concatArr = arr.concat(arr2)
-    console.log("cccccccccccccccccccccccccccccccccc", concatArr)
+  // every (return boolean)
+  let everyArr = arr.every((item, index) => item === "shristy");
 
-    // some (return boolean)
-    let someArr = arr.some((item, index) => (
-        item === "shristy"
-    ))
+  // map (returns new array of same length)
+  let mapArr = arr2.map((item, index) => item >= 4);
+  console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaa" + Array.isArray(mapArr));
 
-    // every (return boolean)
-    let everyArr = arr.every((item, index) => (
-        item === "shristy"
-    ))
+  // slice
+  // splice
 
-    // map (returns new array of same length) 
-    let mapArr = arr2.map((item, index) => (
-        item >= 4
-    ))
-    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaa" + Array.isArray(mapArr))
+  // find (return first value that satisfies condition)
+  let findArr = arr2.find((item, index) => item >= 4);
+  console.log(findArr);
 
-    // slice
-    // splice
+  // indexOf(return number)
+  let indesArr = arr.indexOf("shristy");
 
-    // find (return first value that satisfies condition)
-    let findArr = arr2.find((item, index) => (
-        item >= 4
-    ))
-    console.log(findArr)
+  // push (adds item to the last index)
+  arr.push("pratiksha");
 
-    // indexOf(return number)
-    let indesArr = arr.indexOf("shristy")
+  // pop (remove last item from the array)
+  arr.pop();
 
-    // push (adds item to the last index)
-    arr.push("samiksha")
+  // shift (remove first item from the array)
+  arr.shift();
 
+  // unshift (adds item to the first index)
+  arr.unshift("coming soon");
 
-    // pop (remove last item from the array)
-    arr.pop()
- 
-    // shift (remove first item from the array)
-    arr.shift()
+  // sort  (arrange the array in ascending order)
+  arr.sort();
 
+  // reverse (reverse the items in a array)
+  arr.reverse();
 
-    // unshift (adds item to the first index) 
-    arr.unshift("samiksha")
- 
-    // sort  (arrange the array in ascending order)
-    arr.sort()
+  // isArray (check if the datatype is array)
+  Array.isArray(arr);
 
-    // reverse (reverse the items in a array)
-    arr.reverse()
+  // StartWith (return booleean)
 
-    // isArray (check if the datatype is array)
-    Array.isArray(arr)
+  let name = "Pratiksha Gurav";
+  name.startsWith("P");
 
+  // toLowerCase  convert string into lower case (return string)
+  name.toLowerCase();
 
+  // toUpperCase  convert string into upper case (return string)
+  name.toUpperCase();
 
-    return (
-        <div>
+  //split ( returns array )
+  name.split(" ");
 
-        </div>
-    )
+  return <div></div>;
 }
